@@ -188,7 +188,6 @@ do
   vim.keymap.set('n','<leader>v',':vsplit <CR>', { noremap = true, silent = true }) -- Modified afterwords
   vim.keymap.set('n','<leader>c',':close <CR>', { noremap = true, silent = true }) -- Modified afterwords
   vim.keymap.set('n','<leader>S',':split <CR>', { noremap = true, silent = true }) -- Modified afterwords
-
   -- Diagnostic Config & Keymaps
   --  See `:help vim.diagnostic.Opts`
   vim.diagnostic.config {
@@ -739,8 +738,9 @@ do
   local servers = {
     -- clangd = {},
     -- gopls = {},
-    -- pyright = {},
+    pyright = {},
     -- tsc = {},
+    ruff = {},
     --
     -- Some languages (like rust) have entire language plugins that can be useful:
     --    https://github.com/mrcjkb/rustaceanvim
@@ -846,7 +846,7 @@ do
     formatters_by_ft = {
       -- rust = { 'rustfmt' },
       -- Conform can also run multiple formatters sequentially
-      -- python = { "black","isort" },
+      python = { "black","isort" },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -1041,3 +1041,4 @@ end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+-- -- In your Neovim config (e.g., init.lua)
